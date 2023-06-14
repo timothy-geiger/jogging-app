@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".ui.main.Fragments.WorkoutFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/colorAccent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/et_jogName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:foregroundTint="@color/colorPrimaryDark"
+                android:hint="@string/tv_Jogging_input"
+                android:inputType="text"
+                android:nextFocusForward="@+id/btn_start"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimary" />
+
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/btn_start_tracking" />
+
+            <Button
+                android:id="@+id/btn_stop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/btn_stop_tracking"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="378dp"
+            android:layout_height="299dp"
+            android:layout_margin="20dp"
+            android:background="@color/colorAccent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/other_workouts"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:foregroundTint="@color/colorPrimaryDark"
+                android:hint="@string/enter_the_type_of_workout"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textColorLink="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/et_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:foregroundTint="@color/colorPrimaryDark"
+                android:hint="@string/enter_your_set_repetitions"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:nextFocusDown="@+id/et_timePicker"
+                android:singleLine="true"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/et_timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:foregroundTint="@color/colorPrimaryDark"
+                android:hint="@string/date_of_workout"
+                android:maxLines="1"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/submit_workout"
+                android:textColor="@color/colorAccent" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
